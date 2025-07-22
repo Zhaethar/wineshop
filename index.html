@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>17도씨 - 수제 초콜릿</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrap">
+
+    <!-- Header -->
+    <header>
+      <h1 class="logo"><img src="17도씨-로고.jpg"></h1>
+      <nav>
+        <ul>
+          <li><a href="#">한정판</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">구매하기</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Banner (wrap 안) -->
+    <section class="main-banner">
+      <div class="banner-text">
+        <h2>17도씨</h2>
+        <p>당신의 온도로 녹아드는 초콜릿</p>
+      </div>
+      <video src="핫초콜릿.mp4" autoplay muted loop playsinline></video>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <h2>About 17°C</h2>
+      <p>
+        초콜릿 맛이 가장 좋다는 <strong>17℃</strong>에서 이름을 딴 프리미엄 수제 초콜릿 전문점.<br>
+        매일 정성껏 만든 초콜릿으로 당신의 순간을 더욱 특별하게 만듭니다.
+      </p>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop">
+      <h2>구매하기</h2>
+      <p>17도씨의 시그니처 제품을 온라인으로 만나보세요.</p>
+      <div class="product-preview">
+        <div class="product-item">
+          <img src="봉봉2.jpg" alt="봉봉 초콜릿">
+          <h3>봉봉 초콜릿</h3>
+          <span>₩3,000</span>
+        </div>
+        <div class="product-item">
+          <img src="조각케이크.png" alt="초코케이크">
+          <h3>초콜릿 케이크</h3>
+          <span>₩6,500</span>
+        </div>
+        <div class="product-item">
+          <img src="핫초콜릿.jpg" alt="핫초콜릿">
+          <h3>핫 초콜릿</h3>
+          <span>₩8,000</span>
+        </div>
+      </div>
+      <a href="#" class="shop-button" onclick="event.preventDefault();">전체 상품 보기</a>
+    </section>
+
+    <!-- SNS -->
+    <section>
+      <h2>Follow Us</h2>
+      <div class="sns">
+        <a href="https://www.instagram.com/17dossi_chocolatier"  target="_blank"><img src="instagram.png" alt="인스타그램"></a>
+        <a href="#"  onclick="event.preventDefault();"><img src="blog.png" alt="블로그"></a>
+			 <a href="#" onclick="event.preventDefault();"><button class="kakao"> 채널 추가하고 이벤트 정보 받기</button></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+				<div class="foot">
+					<ul class="foot-row">
+						<li>사업자등록번호: 123-45-67890</li>
+            <li class="divider">|</li>
+						<li>고객센터: 070-0000-0000</li>
+            </ul>
+            <ul class="foot-row">
+						<li>경기도 성남시 분당구 정자일로 95</li>
+            <li class="divider">|</li>
+						<li>전화 2025-0514</li>
+					</ul>
+				</div>
+				<address><p>&copy; 17도씨. All rights reserved.</p> 
+					본사이트의 모든 컨텐츠는 저작권 보호를 받습니다.</address>
+				
+			</footer>
+
+  </div>
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+      <span class="close" id="closePopup">&times;</span>
+      <div class="popup-content">
+        <h2>이벤트 안내</h2>
+        <p>5월 20일까지 참여하면 경품이!</p>
+        <p>학생증을 보여주면 봉봉 초콜릿 하나가 공짜!</p>
+        <button onclick="alert('이벤트 참여!')">이벤트 참여</button>
+        <p class="today-hidden" id="hideToday">오늘 하루 보지 않기</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const overlay = document.getElementById("popupOverlay");
+    overlay.style.display = "flex"; // 무조건 팝업 보이기
+
+    // 닫기 버튼
+    document.getElementById("closePopup").onclick = function () {
+      overlay.style.display = "none";
+    };
+
+    // 오늘 하루 보지 않기 (임시 비활성)
+    document.getElementById("hideToday").onclick = function () {
+      overlay.style.display = "none";
+    };
+  });
+</script>
+</body>
+</html>
